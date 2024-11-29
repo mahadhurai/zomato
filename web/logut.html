@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Zomato</title>
+        <link rel="icon" href="./image/z1">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            body{
+                background-image: url(./image/z5);
+                background-position: contain;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #out{
+                width: 370px;
+                height: 450px;
+                background-color: white;
+                border: 2px solid black;
+                margin-left: 500px;
+                margin-top: 60px;
+                border-radius: 30px;
+                box-shadow: 20px 20px 300px black;
+                
+            }
+            h1{
+                color: black;
+                font-family: "Poppins", system-ui;
+                font-weight: 500;
+                font-style: normal;
+                padding-left: 50px;
+            }
+            #logout{
+                height: 300px;
+                border-radius: 300px;
+                padding-left: 40px;
+            }
+            input{
+                width: 80px;
+                height: 35px;
+                color: blue;
+                font-family: "Poppins", system-ui;
+                font-weight: 600;
+                font-style: normal;
+                margin-top: 20px;
+                margin-left: 150px;
+                background-color: white;
+                border: 3px solid blue;
+                border-radius: 10px;
+            }
+            input:hover{
+                cursor: pointer;
+                background-color:  blue;
+                box-shadow: 2px 2px 30px blue;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="out">
+        <form action="http://localhost:8080/WebApplication/logout" method="post" >
+            <img src="./image/p1" id="logout">
+            <h1>Logout Successfully</h1>
+        </form>
+        <form action="./index.html" method="post">
+            <input type="submit" value="Back">
+        </form>
+    </div>
+    </body>
+</html>

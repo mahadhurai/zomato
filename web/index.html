@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Zomato</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./image/z1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #zom {
+            width: 100%;
+            height: 400px;
+            background-image: url(./image/z2);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            margin-left: 55%;
+        }
+
+        #head ul li {
+            display: inline;
+            padding: 40px;
+            text-decoration: none;
+            color: white;
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        a:active {
+            text-decoration-line: none;
+        }
+
+        #zom h1 {
+            color: white;
+            margin-left: 360px;
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #img {
+            margin-top: 80px;
+            margin-left: 480px;
+        }
+
+        input {
+            width: 50%;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            margin-left: 25%;
+            margin-top: 50px;
+            letter-spacing: 0.5px;
+        }
+
+        #n1 {
+            width: 10px;
+            background-color: white;
+        }
+
+        #login {
+            width: 300px;
+            height: 500px;
+            background-color: white;
+            border: 2px solid black;
+        }
+
+        .sec1 {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        .box {
+            width: 350px;
+            height: 230px;
+            border: 1px solid #9a9595;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .box img {
+            width: 350px;
+            height: 170px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+
+        .box h5 {
+            font-family: "Poppins", system-ui;
+            font-weight: 600;
+            font-style: normal;
+            padding: 5px;
+        }
+
+        .box p {
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            padding: 3px;
+        }
+
+
+        .sec2 h1 {
+            font-family: "Poppins", system-ui;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 2rem;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+
+        .sec2 p {
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.3rem;
+            margin-left: 100px;
+            margin-top: 10px;
+        }
+
+        .sec2 img {
+            width: 250px;
+            height: 300px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .img-content {
+            position: absolute;
+            top: 1140px;
+            color: white;
+            padding: 10px;
+        }
+
+        .sec2-img {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .img-content h2 {
+            font-family: "Poppins", system-ui;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 1rem;
+        }
+
+        .img-content h3 {
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+        }
+
+        .sec3 {
+            width: 80%;
+            margin-left: 120px;
+        }
+
+        .sec3 h1 {
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2rem;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .loc {
+            width: 350px;
+            height: 55px;
+            border: 1px solid #c8c4c4;
+            border-radius: 5px;
+            padding: 10px;
+            position: relative;
+        }
+
+        .loc:hover {
+            box-shadow: 2px 2px 5px #c2c0c0;
+
+        }
+
+        .main-loc {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .loc h2 {
+            font-size: 1.2rem;
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .loc p {
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 0.8rem;
+            color: gray;
+        }
+
+        .loc i {
+            position: absolute;
+            right: 30px;
+            bottom: 40px;
+        }
+
+        .sec4 {
+            width: 100%;
+            height: 500px;
+            background-color: #FFFBF7;
+            margin-top: 100px;
+            display: flex;
+        }
+
+        .sec4 img {
+            width: 400px;
+            margin-left: 300px;
+
+        }
+
+        .sec4 input[type="radio"] {
+            width: 20px;
+            color: #FF988F;
+        }
+
+        .app img {
+            width: 150px;
+        }
+
+        .app input {
+            width: 300px;
+            height: 30px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 1rem;
+        }
+
+        .app button {
+            width: 200px;
+            height: 50px;
+            background-color: #FF988F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-top: 20px;
+
+        }
+
+        .app p {
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .app {
+            margin-top: 50px;
+        }
+        .sec5{
+            height: 500px;
+            background-color: #FCFCFC;
+            padding-left: 170px;
+            padding-top: 70px;
+        }
+        .boxx{
+            width: 1000px;
+            height: 60px;
+            border: 1px solid #9a9595;
+            border-radius: 5px;
+            margin-top: 20px;
+            background-color: white;
+            padding-top: 20px;
+            padding-left: 10px;
+            position: relative;
+        }
+        .boxx p{
+            color: black;
+            font-size: 1.3rem;
+        }
+        .sec5 h2{
+            font-family: "Poppins", system-ui;
+            font-weight: 500;
+            font-style: normal;
+
+        }
+        .boxx i{
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+        footer img{
+            width: 150px;
+        }
+        footer{
+            height: 500px;
+            background-color: #F8F8F8;
+            padding-left: 100px;
+        }
+        .footer{
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+        }
+        .foot h2 ,.boxx h2{
+            font-family: "Poppins", system-ui;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 15px;
+            margin-top: 40px;
+        }
+        .foot li{
+            list-style-type: none;
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            margin-top: 10px;
+            color: #9a9595;
+        }
+        .foot i{
+            margin: 20px 0 20px 5px;
+        }
+        .f1{
+            display: flex;
+            margin-top: 100px;
+            padding-top: 50px;
+        }
+        .drop-down{
+            margin-left: 55%;
+            
+        }
+        .drop{
+            width: 100px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0);
+            border: 1px solid #9a9595;
+            border-radius: 3px;
+            margin-left: 10px;
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+        }
+        hr{
+            width: 90%;
+            margin: 20px 0 20px 0;
+        }
+        p{
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            color: #9a9595;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="zom">
+        <nav id="head">
+            <ul>
+                <a href="./sign.html">
+                    <li>Sign in</li>
+                </a>
+                <a href="http://localhost:8080/WebApplication/profile">
+                    <li>Profile</li>
+                </a>
+                <a href="./login.html">
+                    <li>Login</li>
+                </a>
+                <a href="http://localhost:8080/WebApplication/logout">
+                    <li>Logout</li>
+                </a>
+            </ul>
+        </nav>
+        <img src="./image/zomato.png" alt="" id="img">
+        <h1>Discover the best food & drinks in Chennai</h1>
+        <input type="text" placeholder="         Search for restaurant, cusine or a dish">
+    </div>
+    <section class="sec1">
+        <div class="box">
+            <div>
+                <img src="./image/a1" alt="">
+            </div>
+            <div>
+                <h5>Order online</h5>
+                <p>Stay home and order to your doorstep</p>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <img src="./image/a2" alt="">
+            </div>
+            <div>
+                <h5>Dining</h5>
+                <p>View the city's favourite dining venues</p>
+            </div>
+        </div>
+        <div class="box">
+            <div><img src="./image/a3" alt=""></div>
+            <div>
+                <h5>Live Events</h5>
+                <p>Discover the India's best events & concerts</p>
+            </div>
+        </div>
+    </section>
+    <section class="sec2">
+        <div>
+            <h1>Collections</h1>
+            <p>Explore curated lists of top restaurants, cafes, pubs, and bars in Chennai, based on trends
+                <span style="color: #FF988F; margin-left: 70px; ">All collections in Chennai > </span>
+            </p>
+        </div>
+        <div class="sec2-img">
+            <div>
+                <img src="./image/f1.png" alt="">
+                <div class="img-content">
+                    <h2>Newly Opened Placed</h2>
+                    <h3>17 Places ></h3>
+                </div>
+            </div>
+            <div><img src="./image/f2.png" alt="">
+                <div class="img-content">
+                    <h2>Top Trending Spots</h2>
+                    <h3>32 Places ></h3>
+                </div>
+            </div>
+            <div>
+                <img src="./image/f3.png" alt="">
+                <div class="img-content">
+                    <h2>Best Insta-Worthy Places</h2>
+                    <h3>18 Places > </h3>
+                </div>
+            </div>
+            <div>
+                <img src="./image/f4.png" alt="">
+                <div class="img-content">
+                    <h2>South Indian Special</h2>
+                    <h3>37 Places > </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec3">
+        <div>
+            <h1>Popular localities in and around <b>Chennai</b></h1>
+        </div>
+        <div class="main-loc">
+            <div class="loc">
+                <h2>T. Nagar</h2>
+                <p>379 Places</p>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="loc">
+                <h2>Adyar</h2>
+                <p>227 Places</p>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="loc">
+                <h2>Mylapore</h2>
+                <p>181 Places</p>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="loc">
+                <h2>Nungam Bakkam</h2>
+                <p>325 Places</p>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="loc">
+                <h2>Anna Nagar</h2>
+                <p>388 Places</p>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="loc">
+                <h2>Alwarpet</h2>
+                <p>150 Places</p>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="loc">
+                <h2>Velachery</h2>
+                <p>524 Places</p>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="loc">
+                <h2>Thuraipakkam</h2>
+                <p>275 Places</p>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="loc">
+                <h2>See More</h2>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+    </section>
+    <section class="sec4">
+        <div><img src="./image/phone.png" alt=""></div>
+        <div class="app">
+            <h1>Get the Zomato app</h1>
+            <p>We will send you a link, open it on your phone to download the app</p>
+            <input type="radio">Email
+            <input type="radio">Phone
+            <input type="text" placeholder="Email">
+            <button>Share App Link</button>
+            <p>Download app from</p>
+            <div>
+                <img src="./image/g1.png" alt="">
+                <img src="./image/g2.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="sec5">
+        <h2>Explore options near me</h2>
+        <div class="boxx">
+            <p>Popular Cuisines Near Me</p><i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="boxx">
+            <p>Popular Restaurant Types Near me</p><i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="boxx">
+            <p>Top Restaurant Chains</p><i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="boxx">
+            <p>Cities We Deliver To</p><i class="fa-solid fa-angle-down"></i>
+        </div>
+    </section>
+<footer>
+    <div class="f1">
+        <img src="./image/footer.avif" alt="">
+        <div class="drop-down">
+            <select name="" class="drop">
+                <option value="">India</option>
+                <option value="">UAE</option>
+            </select>
+            <select name="" class="drop">
+                <option value="">English</option>
+                <option value="">Tamil</option>
+                <option value="">Telugu</option>
+                <option value="">Hindi</option>
+            </select>
+        </div>
+    </div>
+    <section class="footer">
+    <div class="foot">
+        <h2>ABOUT ZOMATO</h2>
+        <li>Who We Are</li>
+        <li>Blog</li>
+        <li>Work With Us</li>
+        <li>Investor Relations</li>
+        <li>Report Fraud</li>
+        <li>Press Kit</li>
+        <li>Contact Us</li>
+    </div>
+    <div class="foot">
+        <h2>ZOMAVERSE</h2>
+        <li>Zomato</li>
+        <li>Blinkit</li>
+        <li>Feeding India</li>
+        <li>Hyperpure</li>
+        <li>Zomato Live</li>
+        <li>Zomaland</li>
+        <li>Weather Union</li>
+    </div>
+    <div class="foot">
+        <h2>FOR RESTAURENTS</h2>
+        <li>Partner With US</li>
+        <li>Apps For You</li>
+    </div>
+    <div class="foot">
+        <h2>LEARN MORE</h2>
+        <li>Privacy</li>
+        <li>Security</li>
+        <li>Terms</li>
+        <li>Sitemap</li>
+    </div>
+    <div class="foot">
+        <h2>SOCIAL LINKS</h2>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <br>
+        <img src="./image/g1.png" alt=""><br><br>
+        <img src="./image/g2.png" alt="">
+    </div>
+</section>
+<hr>
+<p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 <br> © Zomato™ Ltd. All rights reserved.</p>
+</footer>
+</body>
+
+</html>

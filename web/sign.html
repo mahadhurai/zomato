@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <title>Zomato</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./image/z1">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-image: url(./image/signin.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #sign{
+            width: 330px;
+            height: 400px;
+            background-color:white;
+            border: 2px solid black;
+            margin-left: 500px;
+            margin-top: 60px;
+            border-radius: 30px;
+            box-shadow: 2px 2px 300px black;
+            padding: 30px;
+            line-height: 40px;
+        }
+        h1{
+            color: black;
+            font-family: "Poppins", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            padding-top: 30px;
+        }
+        input{
+            width: 300px;
+            height: 35px;
+            padding: 8px;
+            border: 1px solid #2E3A46;
+            border-radius: 5px;
+            font-size: 15px;
+            font-family: "Poppins", system-ui;
+            font-weight: 450;
+            font-style: normal;
+        }
+        #sub{
+            width: 320px;
+            background-color: red;
+            border: none;
+            color: white;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-family: "Poppins", system-ui;
+            font-weight: 450;
+            font-style: normal;
+        }
+        a{
+            text-decoration-line: none;
+            color: black;
+            margin-left: 150px;
+            padding-top: 5rem;
+        }
+    </style>
+    <body>
+        <div id="sign">
+            <form action="http://localhost:8080/WebApplication/signup" method="post" >
+                <h1>Sign In</h1>
+                <br>
+                <input type="text" placeholder="Enter your full name" name="uname">
+                <br><br>
+                <input type="password" placeholder="Create password" name="upwd">
+                <br><br>
+                <input type="submit" value="Create account" id="sub">
+            </form>
+                <a href="./index.html" id="b1">Back</a>
+        </div>
+    </body>
+</html>
